@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        background-color: red;
+        height: 150px;
+        width: 200px;
+        border-radius: 4px;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    
+</body>
+<script>
+    let a=0;
+    let stop=setInterval(func,100);
+    function func(){
+        a=a+10;
+        if(a==200){
+            clearInterval(stop);
+        }
+        let box=document.querySelector(".box");
+        box.style.marginLeft=a+"px";
+    }
+</script>
+</html>
